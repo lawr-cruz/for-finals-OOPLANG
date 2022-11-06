@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.finalsprojecttest;
+
 
 import java.awt.*;
 import javax.swing.*;
@@ -31,36 +31,40 @@ public class app_ui extends JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         Main_Menu = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        mainMenuPanel1 = new javax.swing.JPanel();
         smallScaleBtn = new javax.swing.JButton();
         wedBtn = new javax.swing.JButton();
         CorpoBtn = new javax.swing.JButton();
         mainLabel1 = new javax.swing.JLabel();
         mainExitBtn = new javax.swing.JButton();
         EventInfo = new javax.swing.JPanel();
-        NoAttendLabel = new javax.swing.JLabel();
-        EvDateLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        noAttendField = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         ok_eventInfoBtn = new javax.swing.JButton();
         cancel_eventInfoBtn = new javax.swing.JButton();
+        eventInfoPanel1 = new javax.swing.JPanel();
+        eventDate = new com.github.lgooddatepicker.components.DatePicker();
+        EvDateLabel = new javax.swing.JLabel();
+        NoAttendLabel = new javax.swing.JLabel();
+        noAttendField = new javax.swing.JTextField();
         Menu_Picker = new javax.swing.JPanel();
         westPanel = new javax.swing.JPanel();
         western_label = new javax.swing.JLabel();
         westScrollPane = new javax.swing.JScrollPane();
         westernTxtArea = new javax.swing.JTextArea();
         WestSelectBtn = new javax.swing.JButton();
+        westPriceLabel = new javax.swing.JLabel();
         phPanel = new javax.swing.JPanel();
         phScrollPane = new javax.swing.JScrollPane();
         phTxtArea = new javax.swing.JTextArea();
         Filipino_label = new javax.swing.JLabel();
         PhSelectBtn1 = new javax.swing.JButton();
+        phPriceLabel = new javax.swing.JLabel();
         medPanel = new javax.swing.JPanel();
         medScrollPane1 = new javax.swing.JScrollPane();
         medTxtArea1 = new javax.swing.JTextArea();
         Med_Label = new javax.swing.JLabel();
         PhSelectBtn2 = new javax.swing.JButton();
+        medPriceLabel = new javax.swing.JLabel();
         Payment = new javax.swing.JPanel();
         paymentLabel = new javax.swing.JLabel();
         payOptionPanel = new javax.swing.JPanel();
@@ -108,7 +112,7 @@ public class app_ui extends JFrame {
 
         Main_Menu.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        mainMenuPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         smallScaleBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         smallScaleBtn.setText("Small-Scale");
@@ -145,16 +149,16 @@ public class app_ui extends JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout mainMenuPanel1Layout = new javax.swing.GroupLayout(mainMenuPanel1);
+        mainMenuPanel1.setLayout(mainMenuPanel1Layout);
+        mainMenuPanel1Layout.setHorizontalGroup(
+            mainMenuPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainMenuPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainMenuPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(mainLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainMenuPanel1Layout.createSequentialGroup()
+                        .addGroup(mainMenuPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(mainExitBtn)
                             .addComponent(CorpoBtn)
                             .addComponent(wedBtn)
@@ -163,11 +167,11 @@ public class app_ui extends JFrame {
                 .addContainerGap())
         );
 
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CorpoBtn, mainExitBtn, smallScaleBtn, wedBtn});
+        mainMenuPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {CorpoBtn, mainExitBtn, smallScaleBtn, wedBtn});
 
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        mainMenuPanel1Layout.setVerticalGroup(
+            mainMenuPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainMenuPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(mainLabel1)
                 .addGap(18, 18, 18)
@@ -187,14 +191,14 @@ public class app_ui extends JFrame {
             Main_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Main_MenuLayout.createSequentialGroup()
                 .addContainerGap(304, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainMenuPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(304, Short.MAX_VALUE))
         );
         Main_MenuLayout.setVerticalGroup(
             Main_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Main_MenuLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainMenuPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(133, Short.MAX_VALUE))
         );
 
@@ -202,19 +206,8 @@ public class app_ui extends JFrame {
 
         EventInfo.setBackground(new java.awt.Color(255, 255, 255));
 
-        NoAttendLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        NoAttendLabel.setText("Number of attendees:");
-
-        EvDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EvDateLabel.setText("Date of Event: ");
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Enter event info below");
-
-        noAttendField.setColumns(25);
-
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        jFormattedTextField1.setText("dd/MM/yyyy");
 
         ok_eventInfoBtn.setText("Okay");
         ok_eventInfoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -230,6 +223,50 @@ public class app_ui extends JFrame {
             }
         });
 
+        eventInfoPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        EvDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EvDateLabel.setText("Date of Event: ");
+
+        NoAttendLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        NoAttendLabel.setText("Number of attendees:");
+
+        noAttendField.setColumns(25);
+
+        javax.swing.GroupLayout eventInfoPanel1Layout = new javax.swing.GroupLayout(eventInfoPanel1);
+        eventInfoPanel1.setLayout(eventInfoPanel1Layout);
+        eventInfoPanel1Layout.setHorizontalGroup(
+            eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eventInfoPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NoAttendLabel)
+                    .addComponent(EvDateLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(noAttendField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eventDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        eventInfoPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EvDateLabel, NoAttendLabel});
+
+        eventInfoPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {eventDate, noAttendField});
+
+        eventInfoPanel1Layout.setVerticalGroup(
+            eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(eventInfoPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NoAttendLabel)
+                    .addComponent(noAttendField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EvDateLabel)
+                    .addComponent(eventDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout EventInfoLayout = new javax.swing.GroupLayout(EventInfo);
         EventInfo.setLayout(EventInfoLayout);
         EventInfoLayout.setHorizontalGroup(
@@ -239,22 +276,13 @@ public class app_ui extends JFrame {
                 .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(EventInfoLayout.createSequentialGroup()
-                        .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ok_eventInfoBtn)
-                            .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(NoAttendLabel)
-                                .addComponent(EvDateLabel)))
+                        .addGap(64, 64, 64)
+                        .addComponent(ok_eventInfoBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(noAttendField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cancel_eventInfoBtn))))
-                .addContainerGap(614, Short.MAX_VALUE))
+                        .addComponent(cancel_eventInfoBtn))
+                    .addComponent(eventInfoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(673, Short.MAX_VALUE))
         );
-
-        EventInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EvDateLabel, NoAttendLabel});
-
-        EventInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jFormattedTextField1, noAttendField});
 
         EventInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cancel_eventInfoBtn, ok_eventInfoBtn});
 
@@ -264,18 +292,12 @@ public class app_ui extends JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NoAttendLabel)
-                    .addComponent(noAttendField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
-                .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EvDateLabel)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(eventInfoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ok_eventInfoBtn)
                     .addComponent(cancel_eventInfoBtn))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
 
         jPanel2.add(EventInfo, "EventPanel");
@@ -285,12 +307,13 @@ public class app_ui extends JFrame {
 
         westPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        western_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         western_label.setText("Western Menu");
 
         westernTxtArea.setEditable(false);
         westernTxtArea.setColumns(20);
         westernTxtArea.setRows(5);
-        westernTxtArea.setText("Menu Set:\n\n\nSteak\n\nBeer Battered Fish\n\nButtered Vegetables\n\nPasta Bolognese or Carbonara\n\nHouse Iced Tea \n\nPHP 150/ pax");
+        westernTxtArea.setText("Appetizers\nHand-cut Fries\nCheese ball\n\nEntrees\nBeef Steak \nDuck Breast Steak\nPumpkin and Pork Croquette\nShrimp tempura and Spicy Sauce\n\nDesserts\nTropical Fruits\nIce cream");
         westScrollPane.setViewportView(westernTxtArea);
 
         WestSelectBtn.setText("Select");
@@ -299,6 +322,8 @@ public class app_ui extends JFrame {
                 WestSelectBtnActionPerformed(evt);
             }
         });
+
+        westPriceLabel.setText("PHP 550.00 per head");
 
         javax.swing.GroupLayout westPanelLayout = new javax.swing.GroupLayout(westPanel);
         westPanel.setLayout(westPanelLayout);
@@ -309,8 +334,9 @@ public class app_ui extends JFrame {
                 .addGroup(westPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(western_label)
                     .addComponent(westScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WestSelectBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(WestSelectBtn)
+                    .addComponent(westPriceLabel))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         westPanelLayout.setVerticalGroup(
             westPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,8 +346,10 @@ public class app_ui extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(westScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(westPriceLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(WestSelectBtn)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         Menu_Picker.add(westPanel);
@@ -331,9 +359,10 @@ public class app_ui extends JFrame {
         phTxtArea.setEditable(false);
         phTxtArea.setColumns(20);
         phTxtArea.setRows(5);
-        phTxtArea.setText("Menu Set:\n\n\nSteak\n\nBeer Battered Fish\n\nButtered Vegetables\n\nPasta Bolognese or Carbonara\n\nHouse Iced Tea \n\nPHP 150/ pax");
+        phTxtArea.setText("Appetizers\nTinapa Rolls\nBaked Scallops\n\nEntrees\nPork Sisig\nChicken Binakol\nBeef Ribs Nilaga\nBicol Express\n\nDesserts\nHalo-halo\nMaja Blanca");
         phScrollPane.setViewportView(phTxtArea);
 
+        Filipino_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Filipino_label.setText("Filipino Menu");
 
         PhSelectBtn1.setText("Select");
@@ -342,6 +371,8 @@ public class app_ui extends JFrame {
                 PhSelectBtn1ActionPerformed(evt);
             }
         });
+
+        phPriceLabel.setText("PHP 525.00 per head");
 
         javax.swing.GroupLayout phPanelLayout = new javax.swing.GroupLayout(phPanel);
         phPanel.setLayout(phPanelLayout);
@@ -352,8 +383,9 @@ public class app_ui extends JFrame {
                 .addGroup(phPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Filipino_label)
                     .addComponent(phScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PhSelectBtn1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(PhSelectBtn1)
+                    .addComponent(phPriceLabel))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         phPanelLayout.setVerticalGroup(
             phPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,8 +395,10 @@ public class app_ui extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(phScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(phPriceLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PhSelectBtn1)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         Menu_Picker.add(phPanel);
@@ -374,9 +408,10 @@ public class app_ui extends JFrame {
         medTxtArea1.setEditable(false);
         medTxtArea1.setColumns(20);
         medTxtArea1.setRows(5);
-        medTxtArea1.setText("Menu Set:\n\n\nLamb Chops\n\nArrosticini\n\nGreek Salad\n\nPaella or Tagliatalle\n\nHouse Iced Tea \n\nPHP 200/ pax");
+        medTxtArea1.setText("Appetizers\nHummus\nSafiha\n\nEntrees\nShish Kabob\nLamb Kabob\nVeggie Kbob\nShrimp with Vegetables\n\nDesserts\nSyrian Rice Pudding\nBaklava");
         medScrollPane1.setViewportView(medTxtArea1);
 
+        Med_Label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Med_Label.setText("Mediterranean Menu");
 
         PhSelectBtn2.setText("Select");
@@ -385,6 +420,8 @@ public class app_ui extends JFrame {
                 PhSelectBtn2ActionPerformed(evt);
             }
         });
+
+        medPriceLabel.setText("PHP 575.00 per head");
 
         javax.swing.GroupLayout medPanelLayout = new javax.swing.GroupLayout(medPanel);
         medPanel.setLayout(medPanelLayout);
@@ -395,8 +432,9 @@ public class app_ui extends JFrame {
                 .addGroup(medPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Med_Label)
                     .addComponent(medScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PhSelectBtn2))
-                .addContainerGap(46, Short.MAX_VALUE))
+                    .addComponent(PhSelectBtn2)
+                    .addComponent(medPriceLabel))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         medPanelLayout.setVerticalGroup(
             medPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,8 +444,10 @@ public class app_ui extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(medScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(medPriceLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PhSelectBtn2)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         Menu_Picker.add(medPanel);
@@ -952,14 +992,16 @@ public class app_ui extends JFrame {
     private javax.swing.JButton ccOkButton;
     private javax.swing.JPanel creditPanel;
     private javax.swing.JButton creditSelect;
+    private com.github.lgooddatepicker.components.DatePicker eventDate;
+    private javax.swing.JPanel eventInfoPanel1;
     private javax.swing.JLabel invoiceLabel;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JButton mainExitBtn;
     private javax.swing.JLabel mainLabel1;
+    private javax.swing.JPanel mainMenuPanel1;
     private javax.swing.JPanel medPanel;
+    private javax.swing.JLabel medPriceLabel;
     private javax.swing.JScrollPane medScrollPane1;
     private javax.swing.JTextArea medTxtArea1;
     private javax.swing.JTextField noAttendField;
@@ -974,6 +1016,7 @@ public class app_ui extends JFrame {
     private javax.swing.JPanel paymentPanel1;
     private javax.swing.JLabel perHeadLabel;
     private javax.swing.JPanel phPanel;
+    private javax.swing.JLabel phPriceLabel;
     private javax.swing.JScrollPane phScrollPane;
     private javax.swing.JTextArea phTxtArea;
     private javax.swing.JTextField ppHeadTextField;
@@ -982,6 +1025,7 @@ public class app_ui extends JFrame {
     private javax.swing.JTextField subtotalTextField1;
     private javax.swing.JButton wedBtn;
     private javax.swing.JPanel westPanel;
+    private javax.swing.JLabel westPriceLabel;
     private javax.swing.JScrollPane westScrollPane;
     private javax.swing.JTextArea westernTxtArea;
     private javax.swing.JLabel western_label;
