@@ -13,6 +13,7 @@ import javax.swing.*;
 public class app_ui extends JFrame {
 
     JFrame frame = new JFrame();
+    OrderInfo order = new OrderInfo();
     /**
      * Creates new form app_ui
      */
@@ -42,10 +43,10 @@ public class app_ui extends JFrame {
         ok_eventInfoBtn = new javax.swing.JButton();
         cancel_eventInfoBtn = new javax.swing.JButton();
         eventInfoPanel1 = new javax.swing.JPanel();
-        eventDate = new com.github.lgooddatepicker.components.DatePicker();
         EvDateLabel = new javax.swing.JLabel();
         NoAttendLabel = new javax.swing.JLabel();
         noAttendField = new javax.swing.JTextField();
+        evDateField = new javax.swing.JTextField();
         Menu_Picker = new javax.swing.JPanel();
         westPanel = new javax.swing.JPanel();
         western_label = new javax.swing.JLabel();
@@ -114,35 +115,35 @@ public class app_ui extends JFrame {
 
         mainMenuPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        smallScaleBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         smallScaleBtn.setText("Small-Scale");
+        smallScaleBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         smallScaleBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 smallScaleBtnMouseClicked(evt);
             }
         });
 
-        wedBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         wedBtn.setText("Weddings/Occasions");
+        wedBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         wedBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wedBtnActionPerformed(evt);
             }
         });
 
-        CorpoBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         CorpoBtn.setText("Corporate Events");
+        CorpoBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         CorpoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CorpoBtnActionPerformed(evt);
             }
         });
 
-        mainLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         mainLabel1.setText("Welcome to AA Catering!");
+        mainLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
-        mainExitBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         mainExitBtn.setText("Exit");
+        mainExitBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         mainExitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mainExitBtnActionPerformed(evt);
@@ -206,13 +207,18 @@ public class app_ui extends JFrame {
 
         EventInfo.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Enter event info below");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         ok_eventInfoBtn.setText("Okay");
         ok_eventInfoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ok_eventInfoBtnMouseClicked(evt);
+            }
+        });
+        ok_eventInfoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ok_eventInfoBtnActionPerformed(evt);
             }
         });
 
@@ -225,13 +231,15 @@ public class app_ui extends JFrame {
 
         eventInfoPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        EvDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         EvDateLabel.setText("Date of Event: ");
+        EvDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        NoAttendLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         NoAttendLabel.setText("Number of attendees:");
+        NoAttendLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         noAttendField.setColumns(25);
+
+        evDateField.setColumns(15);
 
         javax.swing.GroupLayout eventInfoPanel1Layout = new javax.swing.GroupLayout(eventInfoPanel1);
         eventInfoPanel1.setLayout(eventInfoPanel1Layout);
@@ -245,13 +253,13 @@ public class app_ui extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(noAttendField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eventDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(evDateField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         eventInfoPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {EvDateLabel, NoAttendLabel});
 
-        eventInfoPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {eventDate, noAttendField});
+        eventInfoPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {evDateField, noAttendField});
 
         eventInfoPanel1Layout.setVerticalGroup(
             eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,8 +271,8 @@ public class app_ui extends JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(eventInfoPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EvDateLabel)
-                    .addComponent(eventDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(evDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout EventInfoLayout = new javax.swing.GroupLayout(EventInfo);
@@ -281,7 +289,7 @@ public class app_ui extends JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancel_eventInfoBtn))
                     .addComponent(eventInfoPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(673, Short.MAX_VALUE))
+                .addContainerGap(742, Short.MAX_VALUE))
         );
 
         EventInfoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cancel_eventInfoBtn, ok_eventInfoBtn});
@@ -297,7 +305,7 @@ public class app_ui extends JFrame {
                 .addGroup(EventInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ok_eventInfoBtn)
                     .addComponent(cancel_eventInfoBtn))
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         jPanel2.add(EventInfo, "EventPanel");
@@ -307,8 +315,8 @@ public class app_ui extends JFrame {
 
         westPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        western_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         western_label.setText("Western Menu");
+        western_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         westernTxtArea.setEditable(false);
         westernTxtArea.setColumns(20);
@@ -336,7 +344,7 @@ public class app_ui extends JFrame {
                     .addComponent(westScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(WestSelectBtn)
                     .addComponent(westPriceLabel))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         westPanelLayout.setVerticalGroup(
             westPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -362,8 +370,8 @@ public class app_ui extends JFrame {
         phTxtArea.setText("Appetizers\nTinapa Rolls\nBaked Scallops\n\nEntrees\nPork Sisig\nChicken Binakol\nBeef Ribs Nilaga\nBicol Express\n\nDesserts\nHalo-halo\nMaja Blanca");
         phScrollPane.setViewportView(phTxtArea);
 
-        Filipino_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Filipino_label.setText("Filipino Menu");
+        Filipino_label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         PhSelectBtn1.setText("Select");
         PhSelectBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -385,7 +393,7 @@ public class app_ui extends JFrame {
                     .addComponent(phScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PhSelectBtn1)
                     .addComponent(phPriceLabel))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         phPanelLayout.setVerticalGroup(
             phPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -411,8 +419,8 @@ public class app_ui extends JFrame {
         medTxtArea1.setText("Appetizers\nHummus\nSafiha\n\nEntrees\nShish Kabob\nLamb Kabob\nVeggie Kbob\nShrimp with Vegetables\n\nDesserts\nSyrian Rice Pudding\nBaklava");
         medScrollPane1.setViewportView(medTxtArea1);
 
-        Med_Label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Med_Label.setText("Mediterranean Menu");
+        Med_Label.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         PhSelectBtn2.setText("Select");
         PhSelectBtn2.addActionListener(new java.awt.event.ActionListener() {
@@ -434,7 +442,7 @@ public class app_ui extends JFrame {
                     .addComponent(medScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PhSelectBtn2)
                     .addComponent(medPriceLabel))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         medPanelLayout.setVerticalGroup(
             medPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -454,14 +462,14 @@ public class app_ui extends JFrame {
 
         jPanel2.add(Menu_Picker, "menuPanel");
 
-        paymentLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         paymentLabel.setText("Payment");
+        paymentLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
         payOptionPanel.setBackground(new java.awt.Color(255, 255, 255));
         payOptionPanel.setLayout(new java.awt.CardLayout());
 
-        payOptionField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         payOptionField.setText("Select a payment option:");
+        payOptionField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         cashSelect.setText("Cash");
         cashSelect.addActionListener(new java.awt.event.ActionListener() {
@@ -507,8 +515,8 @@ public class app_ui extends JFrame {
 
         payOptionPanel.add(payOptionsPanel, "payOptionPanel");
 
-        ccInfoLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ccInfoLabel.setText("Enter your credit card info here");
+        ccInfoLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         ccLastNamelabel.setText("Customer Last Name:");
 
@@ -664,8 +672,8 @@ public class app_ui extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        cashInfoLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cashInfoLabel1.setText("Enter your customer info here:");
+        cashInfoLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         cashBackButton.setText("BACK");
         cashBackButton.addActionListener(new java.awt.event.ActionListener() {
@@ -727,23 +735,23 @@ public class app_ui extends JFrame {
 
         perHeadLabel.setText("price per head");
 
-        invoiceLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         invoiceLabel.setText("Invoice");
+        invoiceLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        ppHeadTextField.setEditable(false);
         ppHeadTextField.setColumns(15);
+        ppHeadTextField.setEditable(false);
         ppHeadTextField.setText(" ");
         ppHeadTextField.setToolTipText("");
 
-        paxTextField1.setEditable(false);
         paxTextField1.setColumns(15);
+        paxTextField1.setEditable(false);
         paxTextField1.setText(" ");
         paxTextField1.setToolTipText("");
 
         subtotalLabel.setText("subtotal");
 
-        subtotalTextField1.setEditable(false);
         subtotalTextField1.setColumns(15);
+        subtotalTextField1.setEditable(false);
         subtotalTextField1.setText(" ");
         subtotalTextField1.setToolTipText("");
 
@@ -853,13 +861,19 @@ public class app_ui extends JFrame {
     }                                                
 
     private void ok_eventInfoBtnMouseClicked(java.awt.event.MouseEvent evt) {                                             
+        String a = noAttendField.getText();
+        JOptionPane.showMessageDialog(frame, a);
+        order.setPax(a);
         CardLayout card = (CardLayout)jPanel2.getLayout();
         card.show(jPanel2, "menuPanel");
+                
     }                                            
 
     private void WestSelectBtnActionPerformed(java.awt.event.ActionEvent evt) {                                              
         CardLayout card = (CardLayout)jPanel2.getLayout();
+        paxTextField1.setText(order.getPax());
         card.show(jPanel2, "payPanel");
+
     }                                             
 
     private void PhSelectBtn1ActionPerformed(java.awt.event.ActionEvent evt) {                                             
@@ -919,6 +933,10 @@ public class app_ui extends JFrame {
         card.show(payOptionPanel, "payOptionPanel");
     }                                              
 
+    private void ok_eventInfoBtnActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        // TODO add your handling code here:
+    }                                               
+
     /**
      * @param args the command line arguments
      */
@@ -947,8 +965,10 @@ public class app_ui extends JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                OrderInfo order=new OrderInfo();
                 new app_ui().setVisible(true);
             }
         });
@@ -992,7 +1012,7 @@ public class app_ui extends JFrame {
     private javax.swing.JButton ccOkButton;
     private javax.swing.JPanel creditPanel;
     private javax.swing.JButton creditSelect;
-    private com.github.lgooddatepicker.components.DatePicker eventDate;
+    private javax.swing.JTextField evDateField;
     private javax.swing.JPanel eventInfoPanel1;
     private javax.swing.JLabel invoiceLabel;
     private javax.swing.JLabel jLabel1;
@@ -1005,7 +1025,7 @@ public class app_ui extends JFrame {
     private javax.swing.JScrollPane medScrollPane1;
     private javax.swing.JTextArea medTxtArea1;
     private javax.swing.JTextField noAttendField;
-    private javax.swing.JButton ok_eventInfoBtn;
+    public javax.swing.JButton ok_eventInfoBtn;
     private javax.swing.JLabel paxLabel;
     private javax.swing.JTextField paxTextField1;
     private javax.swing.JLabel payOptionField;
